@@ -1,14 +1,24 @@
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router";
 
-function App() {
-
+const App = () => {
   return (
-    <div>
-      <p className="text-6xl font-semibold">
-        Hello
-      </p>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route index element={"Home"} />
+        <Route path="about" element={"About"} />
 
-export default App
+        <Route element={"AuthLayout"}>
+          <Route path="login" element={"Login"} />
+          <Route path="register" element={"Register"} />
+        </Route>
+
+        <Route element={"DashboardLayout"}>
+          <Route index element={"dashboard"} />
+          <Route path="settings" element={"Settings"} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;

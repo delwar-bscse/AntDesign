@@ -7,6 +7,9 @@ import {
 import { Menu } from "antd";
 import { NavLink } from "react-router";
 import { MdOutlineDashboard } from "react-icons/md";
+import { ImTable } from "react-icons/im";
+import { FaWpforms } from "react-icons/fa6";
+import { AiOutlineBarChart } from "react-icons/ai";
 
 const items = [
   {
@@ -17,78 +20,79 @@ const items = [
   {
     key: "sub2",
     label: "Tables",
-    icon: <MailOutlined />,
+    icon: <ImTable />,
     children: [
       {
         key: "1",
-        label: <NavLink to="/table1" >Table 1</NavLink>,
+        label: <NavLink to="/table1" >Table 01</NavLink>,
       },
       {
         key: "2",
-        label:  <NavLink to="/table2" >Table 1</NavLink>,
+        label:  <NavLink to="/table2" >Table 02</NavLink>,
       },
       {
         key: "3",
-        label:  <NavLink to="/table3" >Table 1</NavLink>,
+        label:  <NavLink to="/table3" >Table 03</NavLink>,
       },
       {
         key: "4",
-        label:  <NavLink to="/table4" >Table 1</NavLink>,
+        label:  <NavLink to="/table4" >Table 04</NavLink>,
       },
     ],
   },
   {
     key: "sub3",
-    label: "Navigation Two",
-    icon: <AppstoreOutlined />,
+    label: "Forms",
+    icon: <FaWpforms />,
     children: [
       {
-        key: "5",
-        label: "Option 5",
+        key: "9",
+        label: <NavLink to="/form1" >Form 01</NavLink>,
       },
       {
-        key: "6",
-        label: "Option 6",
+        key: "10",
+        label: <NavLink to="/form2" >Form 02</NavLink>,
       },
       {
-        key: "sub4",
-        label: "Submenu",
-        children: [
-          {
-            key: "7",
-            label: "Option 7",
-          },
-          {
-            key: "8",
-            label: "Option 8",
-          },
-        ],
+        key: "11",
+        label: <NavLink to="/form3" >Form 03</NavLink>,
+      },
+      {
+        key: "12",
+        label: <NavLink to="/form4" >Form 04</NavLink>,
       },
     ],
   },
   {
     key: "sub4",
-    label: "Navigation Three",
-    icon: <SettingOutlined />,
+    label: "Charts",
+    icon: <AiOutlineBarChart />,
     children: [
       {
-        key: "9",
-        label: "Option 9",
+        key: "5",
+        label: "Chart 5",
       },
       {
-        key: "10",
-        label: "Option 10",
+        key: "6",
+        label: "Chart 6",
       },
       {
-        key: "11",
-        label: "Option 11",
-      },
-      {
-        key: "12",
-        label: "Option 12",
+        key: "sub5",
+        label: "More Charts",
+        children: [
+          {
+            key: "7",
+            label: "Chart 7",
+          },
+          {
+            key: "8",
+            label: "Chart 8",
+          },
+        ],
       },
     ],
   },
+  
 ];
 
 const Sidebar = () => {

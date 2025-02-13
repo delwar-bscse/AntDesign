@@ -8,7 +8,7 @@ const DashboardLayout = () => {
         <Sidebar />
       </div>
       <div className="h-screen flex-1 relative overflow-y-auto">
-        <div className="sticky top-0 bg-gray-300 h-[50px]">Header</div>
+        <div className="sticky top-0 bg-gray-100 h-[50px]"></div>
         <div className="">
           <Outlet />
         </div>

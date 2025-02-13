@@ -47,7 +47,7 @@ const items = [
     children: [
       {
         key: "9",
-        label: <NavLink to="/form1" >Form 01</NavLink>,
+        label: <NavLink to="/form1" >Create Account</NavLink>,
       },
       {
         key: "10",
@@ -55,7 +55,7 @@ const items = [
       },
       {
         key: "11",
-        label: <NavLink to="/form3" >Form 03</NavLink>,
+        label: <NavLink to="/form3" >Profile</NavLink>,
       },
       {
         key: "12",

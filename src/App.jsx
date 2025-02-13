@@ -4,6 +4,8 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import Table01 from "./pages/tables/Table01";
 import Form01 from "./pages/forms/Form01";
 import PageNotFound from "./notfound/PageNotFound";
+import Profile from "./pages/forms/Profile";
+
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path="table1" element={<Table01 />} />
           <Route path="form1" element={<Form01 />} />
+          <Route path="form3" element={<Profile />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

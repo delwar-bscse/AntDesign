@@ -68,7 +68,7 @@ export default class AreaChartDemo extends PureComponent {
   render() {
     return (
       <div className="w-full border-2 border-red-300 rounded-2xl p-3">
-        <h4 className="text-5xl font-bold text-gray-800">Order Charts</h4>
+        <h4 className="text-5xl font-bold text-gray-800">Area Charts</h4>
         <ResponsiveContainer width="100%" height={300}>
           <AreaChart
             data={data}

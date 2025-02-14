@@ -3,7 +3,7 @@ import { Flex, Progress } from "antd";
 import { motion } from "framer-motion";
 
 const RingChartComponent = ({
-  ringData: { rPercent, rStrokeColor, rTrailColor },
+  ringData: { rPercent, rStrokeColor, rTrailColor, rTitle },
 }) => (
   <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -32,7 +32,7 @@ const RingChartComponent = ({
         transition={{ duration: 0.5, delay: 0.3 }}
         className="font-bold text-3xl text-gray-600"
       >
-        Total Food Sell
+        {rTitle}
       </motion.p>
     </motion.div>
 );
@@ -50,6 +50,7 @@ const RingChart = () => (
               rPercent: 81,
               rStrokeColor: "#FF5B5B",
               rTrailColor: "rgba(255, 91, 91, 0.15)",
+              rTitle:"Pie Chart One"
             }}
           />
           <RingChartComponent
@@ -57,6 +58,7 @@ const RingChart = () => (
               rPercent: 22,
               rStrokeColor: "#00B074",
               rTrailColor: "rgba(0, 176, 116, 0.15)",
+              rTitle:"Pie Chart Two"
             }}
           />
           <RingChartComponent
@@ -64,6 +66,7 @@ const RingChart = () => (
               rPercent: 63,
               rStrokeColor: "#2D9CDB",
               rTrailColor: " rgba(45, 156, 219, 0.15)",
+              rTitle:"Pie Chart Three"
             }}
           />
         </Flex>

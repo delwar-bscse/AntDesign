@@ -4,25 +4,31 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const data = [
-  { month: "Jan", revenue: 9800 },
-  { month: "Feb", revenue: 15000 },
-  { month: "Mar", revenue: 9000 },
-  { month: "Apr", revenue: 20000 },
-  { month: "May", revenue: 30000 },
-  { month: "Jun", revenue: 38753 },
-  { month: "Jul", revenue: 25000 },
-  { month: "Aug", revenue: 20000 },
-  { month: "Sept", revenue: 22000 },
-  { month: "Oct", revenue: 12657 },
-  { month: "Nov", revenue: 19000 },
-  { month: "Dec", revenue: 21000 },
+  { duration: "Jan", revenue: 9800 },
+  { duration: "Feb", revenue: 15000 },
+  { duration: "Mar", revenue: 9000 },
+  { duration: "Apr", revenue: 20000 },
+  { duration: "May", revenue: 30000 },
+  { duration: "Jun", revenue: 38753 },
+  { duration: "Jul", revenue: 25000 },
+  { duration: "Aug", revenue: 20000 },
+  { duration: "Sept", revenue: 22000 },
+  { duration: "Oct", revenue: 12657 },
+  { duration: "Nov", revenue: 19000 },
+  { duration: "Dec", revenue: 21000 },
 ];
 
 const yearData = [
-  { month: "2020", revenue: 200000 },
-  { month: "2021", revenue: 250000 },
-  { month: "2022", revenue: 300000 },
-  { month: "2023", revenue: 350000 },
+  { duration: "2020", revenue: 230000 },
+  { duration: "2021", revenue: 250000 },
+  { duration: "2022", revenue: 270000 },
+  { duration: "2023", revenue: 190000 },
+  { duration: "2024", revenue: 200000 },
+  { duration: "2025", revenue: 150000 },
+  { duration: "2026", revenue: 400000 },
+  { duration: "2027", revenue: 350000 },
+  { duration: "2028", revenue: 600000 },
+  { duration: "2029", revenue: 450000 },
 ];
 
 const maxRevenue = Math.max(...data.map((item) => item.revenue));
@@ -96,7 +102,7 @@ const LineChartDesign = () => {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <h3 className="text-5xl font-bold text-gray-800">Line Chart</h3>
           <Select 
-            defaultValue="month" // Default to months
+            defaultValue="month"
             style={{ width: 100 }} 
             onChange={(value) => setSelectedFilter(value)}
           >
@@ -106,7 +112,7 @@ const LineChartDesign = () => {
         </div>
         <ResponsiveContainer  width="100%" height={300}>
           <LineChart data={filteredData} margin={{ top: 50, right: 30, left: 10, bottom: 20 }}>
-            <XAxis dataKey="month" tickLine={false} axisLine={false} />
+            <XAxis dataKey="duration" tickLine={false} axisLine={false} />
             <YAxis tick={{ fill: "#aaa" }} tickFormatter={(tick) => `$${tick / 1000}k`} tickLine={false} 
             axisLine={false}
             />
